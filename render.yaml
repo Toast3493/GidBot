@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: GidBot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: GUILD_ID
+        sync: false
+      - key: ROLE_ID
+        sync: false
+      - key: GUEST_ROLE_ID
+        sync: false
+      - key: ADMIN_ROLE_ID
+        sync: false
+      - key: TICKET_CHANNEL_ID
+        sync: false
+      - key: LOG_CHANNEL_ID
+        sync: false
+      - key: APPROVER_ROLE_ID
+        sync: false
+      - key: GUIDE_ROLE_ID
+        sync: false
+      - key: VERIFY_CHANNEL_ID
+        sync: false
